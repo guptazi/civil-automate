@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MUTCD Sign Finder</title>
+  <style>
+    body { font-family: Arial; padding: 20px; max-width: 600px; margin: auto; }
+    select, button { padding: 8px; margin-top: 10px; }
+    #result img { width: 100px; margin-top: 10px; }
+    #result { margin-top: 20px; border-top: 1px solid #ccc; padding-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <h2>MUTCD Sign Finder</h2>
+  
+  <label>Select Sign Type:</label>
+  <select id="signType">
+    <option value="">-- Choose Type --</option>
+    <option value="Regulatory">Regulatory</option>
+    <option value="Warning">Warning</option>
+    <option value="Guide">Guide</option>
+  </select>
+
+  <label>Select Sign Name:</label>
+  <select id="signName">
+    <option value="">-- Choose Sign --</option>
+  </select>
+
+  <div id="result"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
