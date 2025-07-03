@@ -2,42 +2,42 @@ const signs = [{
     type: "Regulatory",
     name: "Stop Sign",
     code: "R1-1",
-    image: "https://mutcd.fhwa.dot.gov/HTM/2009/part2/fig2b_01_longdesc.htm",
+    image: "https://purepng.com/public/uploads/large/purepng.com-sign-stoptraffic-signsign-stopnotify-driversstop-signs-1701527614263a3116.png",
     description: "Used at intersections to assign right-of-way. Full stop required."
   },
   {
     type: "Regulatory",
     name: "Yield Sign",
     code: "R1-2",
-    image: "https://mutcd.fhwa.dot.gov/HTM/2009/part2/fig2b_01_longdesc.htm",
+    image: "https://natcap.com/wp-content/uploads/NCI-Sign-Department-Inventory_TDS331.jpg",
     description: "Used to assign right-of-way without requiring a full stop."
   },
   {
     type: "Warning",
     name: "Pedestrian Crossing",
     code: "W11-2",
-    image: "https://mutcd.fhwa.dot.gov/HTM/2009/part2/fig2c_06_longdesc.htm",
+    image: "https://static.vecteezy.com/system/resources/previews/008/952/400/non_2x/yield-to-pedestrians-road-sign-traffic-sign-on-white-background-vector.jpg",
     description: "Warns drivers of pedestrian crossings ahead."
   },
   {
     type: "Warning",
     name: "Merge Sign",
     code: "W4-1",
-    image: "https://mutcd.fhwa.dot.gov/HTM/2009/part2/fig2c_05_longdesc.htm",
+    image: "https://m.media-amazon.com/images/I/61mcYGdJkHL._SL1500_.jpg",
     description: "Warns of merging lanes or traffic ahead."
   },
   {
     type: "Guide",
     name: "Exit Sign",
     code: "E1-5",
-    image: "https://mutcd.fhwa.dot.gov/HTM/2009/part2/fig2e_11_longdesc.htm",
+    image: "https://as1.ftcdn.net/v2/jpg/06/19/64/58/1000_F_619645833_r0r6W0SoVEHOfHBy1LFFvuEc5dMWDLc8.jpg",
     description: "Provides information about freeway exits."
   },
   {
     type: "Guide",
     name: "Route Marker",
     code: "M1-1",
-    image: "https://mutcd.fhwa.dot.gov/HTM/2009/part2/fig2d_01_longdesc.htm",
+    image: "https://images.roadtrafficsigns.com/img/lg/K/us-101-washington-route-marker-shield-sign-k2-5110.png",
     description: "Marks a U.S. numbered route."
   }];
 
