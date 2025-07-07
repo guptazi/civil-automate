@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Signal Warrant Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>MUTCD Signal Warrant Checker</h2>
+
+  <div class="input-group">
+    <label>Major Street Volume (vehicles/hour):</label>
+    <input type="number" id="majorVolume">
+    
+    <label>Minor Street Volume (vehicles/hour):</label>
+    <input type="number" id="minorVolume">
+    
+    <label>Peak Hour Volume:</label>
+    <input type="number" id="peakHourVolume">
+
+    <label>Urban or Rural:</label>
+    <select id="context">
+      <option value="urban">Urban</option>
+      <option value="rural">Rural</option>
+    </select>
+    
+    <button onclick="checkWarrants()">Check Warrants</button>
+    <button onclick="window.print()">🖨️ Print Report</button>
+  </div>
+
+  <div id="report">
+    <h3>Warrant Evaluation Result</h3>
+    <div id="results"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
