@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  max-width: 600px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, select, button {
+  padding: 8px;
+  font-size: 1rem;
+}
+
+#report {
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+}
+
+@media print {
+  button, input, select, label {
+    display: none;
+  }
+}
