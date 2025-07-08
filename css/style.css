@@ -1,0 +1,133 @@
+html {
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.navbar {
+  transition: background-color 0.3s ease;
+}
+
+.navbar .nav-link {
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #0066ff;
+}
+
+.btn-primary {
+  background-color: #0066ff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0053cc;
+}
+
+.btn-outline-primary {
+  border-color: #0066ff;
+  color: #0066ff;
+}
+
+.btn-outline-primary:hover {
+  background-color: #0066ff;
+  color: #fff;
+}
+
+.masthead {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.masthead::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.masthead .container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.cta {
+  background: linear-gradient(135deg, #0066ff, #00bfff);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  box-shadow: 0 8px 24px rgba(0, 102, 255, 0.3);
+}
+
+.cta .btn {
+  font-size: 1.25rem;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+}
+
+section h2 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+section ul {
+  padding-left: 1.25rem;
+}
+
+section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.img-fluid {
+  border-radius: 12px;
+}
+
+footer {
+  background-color: #222;
+  color: #ccc;
+}
+
+footer a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+form .form-control {
+  border-radius: 8px;
+  box-shadow: none;
+  border-color: #ccc;
+  transition: border-color 0.3s;
+}
+
+form .form-control:focus {
+  border-color: #0066ff;
+  box-shadow: 0 0 0 0.1rem rgba(0, 102, 255, 0.25);
+}
+
+form button {
+  padding: 0.75rem 2rem;
+}
