@@ -1,167 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Civil Automate</title>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Elegant Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary: #2b6777;
+      --secondary: #c8d8e4;
+      --accent: #f2f2f2;
+      --dark: #1f2e35;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .navbar {
+      background-color: #ffffff;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+
+    .nav-link {
+      font-weight: 500;
+      color: #555;
+      margin: 0 0.7rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--primary);
+    }
+
+    .masthead {
+      min-height: 100vh;
+      background: linear-gradient(rgba(43, 103, 119, 0.6), rgba(43, 103, 119, 0.6)), url('image2.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+    }
+
+    .masthead h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+
+    .masthead p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-weight: 600;
+      font-size: 2.25rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+
+    section {
+      padding: 5rem 0;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #1e4c59;
+    }
+
+    .btn-outline-primary {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline-primary:hover {
+      background-color: var(--primary);
+      color: #fff;
+    }
+
+    ul li::marker {
+      color: var(--primary);
+    }
+
+    .img-fluid {
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .cta {
+      background-color: var(--primary);
+      color: #fff;
+      padding: 4rem 0;
+    }
+
+    footer {
+      background-color: var(--dark);
+      color: #ccc;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    textarea.form-control {
+      resize: none;
+    }
+
+    @media (max-width: 767px) {
+      .masthead h1 {
+        font-size: 2.2rem;
+      }
+
+      .masthead p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="70">
-  <!-- Navbar -->
-<nav id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
-  <div class="container">
-    <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-      <img src="logo.png" alt="Civil Automate Logo" height="50" class="me-2">
-      <span class="d-none d-md-inline">Civil Automate</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="navbarResponsive" class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#Prediction">AADT&nbsp;Prediction</a></li>
-        <li class="nav-item"><a class="nav-link" href="#dashboards">Work Automated</a></li>
-        <li class="nav-item"><a class="nav-link" href="#ml">Machine&nbsp;Learning</a></li>
-        <li class="nav-item"><a class="nav-link" href="#data">Data&nbsp;Solutions</a></li>
-        <li class="nav-item"><a class="btn btn-primary ms-lg-3" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
+  <!-- Navbar -->
+  <nav id="mainNav" class="navbar navbar-expand-lg fixed-top shadow-sm py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="logo.png" alt="Logo" height="45" class="me-2">
+        Civil Automate
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarResponsive" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#Prediction">AADT Prediction</a></li>
+          <li class="nav-item"><a class="nav-link" href="#dashboards">Work Automation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ml">Machine Learning</a></li>
+          <li class="nav-item"><a class="nav-link" href="#data">Data Solutions</a></li>
+          <li class="nav-item"><a class="btn btn-primary ms-lg-3" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <!-- Hero -->
-  <header class="masthead d-flex align-items-center text-center text-white" style="background-image:url('image2.jpg');">
+  <header class="masthead">
     <div class="container">
-      <h1 class="display-3 fw-bold">Custom Automation.<br>Real Results.</h1>
-      <p class="lead mt-3 mb-4">From Excel to AI — Civil Automate builds smart solutions tailored to your workflow.</p>
-      <a href="#contact" class="btn btn-lg btn-primary">Let's Innovate</a>
+      <h1><span id="typed"></span></h1>
+      <p>From Excel to AI — Civil Automate builds smart, elegant solutions tailored to your workflow.</p>
+      <a href="#contact" class="btn btn-lg btn-outline-light">Let’s Innovate</a>
     </div>
   </header>
 
-  <!-- Signal Timing -->
-  <section id="Prediction" class="py-5">
+  <!-- AADT Prediction -->
+  <section id="Prediction">
     <div class="container">
-      <div class="row align-items-center g-4">
+      <div class="row align-items-center g-5">
         <div class="col-lg-6">
-          <h2 class="fw-bold">AADT Prediction</h2>
-          <p class="text-muted">We make prediction of AADT using traditional and cutting-edge technology</p>
+          <h2 class="section-title">AADT Prediction</h2>
+          <p class="text-muted">We use traditional models and modern machine learning techniques to forecast AADT trends accurately.</p>
           <ul>
             <li>AADT Prediction of Trucks</li>
             <li>Prediction of Traffic Flow</li>
-            <li>Web-based Prediction</li>
+            <li>Web-based Prediction Dashboard</li>
           </ul>
-          <a href="#contact" class="btn btn-outline-primary">Let's Innovate</a>
+          <a href="#contact" class="btn btn-outline-primary mt-3">Learn More</a>
         </div>
         <div class="col-lg-6">
-          <img class="img-fluid rounded shadow" src="image3.webp" alt="Traffic signal image">
+          <img src="image3.webp" alt="AADT Image" class="img-fluid">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Dashboards -->
-  <section id="dashboards" class="py-5 bg-light">
+  <!-- Work Automation -->
+  <section id="dashboards" class="bg-light">
     <div class="container">
-      <div class="row align-items-center g-4 flex-lg-row-reverse">
+      <div class="row align-items-center g-5 flex-lg-row-reverse">
         <div class="col-lg-6">
-          <h2 class="fw-bold">Work Automation</h2>
-          <p class="text-muted">At Civil Automate, we help businesses stay ahead by creating custom automation tools — from Excel macros to AI-driven applications tailored to your unique workflow.</p>
+          <h2 class="section-title">Work Automation</h2>
+          <p class="text-muted">We streamline your workflow by building intelligent, automated tools, reducing manual effort and errors.</p>
           <ul>
-            <li>Automation of MUTCD using Excel (VBA)</li>
-            <li>Traffic Sign Marking Selection Automation</li>
-            <li>Customized VBA Building for excel</li>
+            <li>MUTCD-based Excel Automation (VBA)</li>
+            <li>Traffic Sign Selector Tools</li>
+            <li>Custom VBA/Script Builder</li>
           </ul>
-          <a href="#contact" class="btn btn-outline-primary">Let's Innovate</a>
+          <a href="#contact" class="btn btn-outline-primary mt-3">Learn More</a>
         </div>
         <div class="col-lg-6">
-          <img class="img-fluid rounded shadow" src="image4.png" alt="Dashboard example">
+          <img src="image4.png" alt="Automation Dashboard" class="img-fluid">
         </div>
       </div>
     </div>
   </section>
 
   <!-- Machine Learning -->
-  <section id="ml" class="py-5">
+  <section id="ml">
     <div class="container">
-      <div class="row align-items-center g-4">
+      <div class="row align-items-center g-5">
         <div class="col-lg-6">
-          <h2 class="fw-bold">Machine Learning</h2>
-          <p class="text-muted">Using Cutting Edge Methodology for Prediction</p>
+          <h2 class="section-title">Machine Learning</h2>
+          <p class="text-muted">Leverage predictive power with advanced ML models tailored to transportation datasets.</p>
           <ul>
-            <li>Volume & speed Prediction</li>
-            <li>Traffic count Data imputation</li>
-            <li>Custom ml model development</li>
+            <li>Volume & Speed Forecasting</li>
+            <li>Missing Data Imputation</li>
+            <li>Custom Model Development</li>
           </ul>
-          <a href="#contact" class="btn btn-outline-primary">Let's Innovate</a>
+          <a href="#contact" class="btn btn-outline-primary mt-3">Learn More</a>
         </div>
         <div class="col-lg-6">
-          <img class="img-fluid rounded shadow" src="image1.webp" alt="Machine learning illustration">
+          <img src="image1.webp" alt="Machine Learning" class="img-fluid">
         </div>
       </div>
     </div>
   </section>
 
   <!-- Data Solutions -->
-  <section id="data" class="py-5 bg-light">
+  <section id="data" class="bg-light">
     <div class="container">
-      <div class="row align-items-center g-4 flex-lg-row-reverse">
+      <div class="row align-items-center g-5 flex-lg-row-reverse">
         <div class="col-lg-6">
-          <h2 class="fw-bold">Research Support</h2>
-          <p class="text-muted">Provide us data to get some good results</p>
+          <h2 class="section-title">Research & Data Support</h2>
+          <p class="text-muted">We assist in technical implementation and data-driven research using modern tools and architecture.</p>
           <ul>
-            <li>Research Support by providing techincal support</li>
-            <li>Python/Docker integrations – If you’re combining tools or services.</li>
-            <li>API integrations</li>
+            <li>Technical Research Assistance</li>
+            <li>Python & Docker Pipelines</li>
+            <li>API Integration Services</li>
           </ul>
-          <a href="#contact" class="btn btn-outline-primary">Let's Innovate</a>
+          <a href="#contact" class="btn btn-outline-primary mt-3">Learn More</a>
         </div>
         <div class="col-lg-6">
-          <img class="img-fluid rounded shadow" src="image5.jpg" alt="Data solutions">
+          <img src="image5.jpg" alt="Data Integration" class="img-fluid">
         </div>
       </div>
     </div>
   </section>
 
-
   <!-- CTA -->
-  <section class="cta py-5 text-white text-center">
+  <section class="cta text-center">
     <div class="container">
-      <h2 class="mb-4">Ready to Build?</h2>
-      <a href="#contact" class="btn btn-light btn-lg">Get Started</a>
+      <h2 class="fw-bold mb-4">Ready to Build?</h2>
+      <a href="#contact" class="btn btn-light btn-lg">Start the Conversation</a>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-5 bg-light">
+  <section id="contact" class="bg-light">
     <div class="container">
-      <h2 class="fw-bold text-center mb-4">Contact Team</h2>
+      <h2 class="section-title text-center">Contact Us</h2>
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <!-- Replace the action with your form endpoint (e.g., Formspree) -->
           <form action="https://formspree.io/f/mzzglvpe" method="POST" class="row g-3">
             <div class="col-md-6">
-              <label class="form-label">First name</label>
-              <input type="text" class="form-control" name="first_name" required>
+              <label class="form-label">First Name</label>
+              <input type="text" class="form-control" name="first_name" required />
             </div>
             <div class="col-md-6">
-              <label class="form-label">Last name</label>
-              <input type="text" class="form-control" name="last_name" required>
+              <label class="form-label">Last Name</label>
+              <input type="text" class="form-control" name="last_name" required />
             </div>
             <div class="col-12">
               <label class="form-label">Email</label>
-              <input type="email" class="form-control" name="email" required>
+              <input type="email" class="form-control" name="email" required />
             </div>
             <div class="col-12">
               <label class="form-label">Message</label>
-              <textarea class="form-control" rows="5" name="message" required></textarea>
+              <textarea class="form-control" name="message" rows="5" required></textarea>
             </div>
             <div class="col-12 text-center">
               <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
@@ -173,16 +298,25 @@
   </section>
 
   <!-- Footer -->
-  <footer class="py-4 bg-dark text-white text-center">
-    <div class="container small">
-      <p class="mb-2">© 2025 Civil Automate. All rights reserved.</p>
-      <!-- <a href="privacy.html" class="text-decoration-none text-white-50 me-3">Privacy Policy</a>
-      <a href="terms.html" class="text-decoration-none text-white-50">Terms & Conditions</a> -->
+  <footer class="text-center py-4">
+    <div class="container">
+      <p>© 2025 Civil Automate. Crafted with precision and purpose.</p>
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      new Typed("#typed", {
+        strings: ["Custom Automation.", "Elegant Engineering.", "Real-world AI Solutions."],
+        typeSpeed: 60,
+        backSpeed: 30,
+        backDelay: 1500,
+        loop: true
+      });
+    });
+  </script>
 </body>
 </html>
